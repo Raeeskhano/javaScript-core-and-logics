@@ -56,3 +56,22 @@ console.log(allFruitsAndVegetables);
 
 const newMixed = [...fruits, ...vegetables]; //spread operator is used to expand the elements of an array into individual elements. it creates a new array by combining the elements of fruits and vegetables arrays.
 console.log(newMixed);
+
+//**************************************
+
+const complexArr = [1, 2, 3, [4, 5, 6, [7, 8], 9, [10, 11]]];
+console.log(complexArr.flat(Infinity)); //flat method creates a new array with all sub-array elements concatenated into it recursively up to the specified depth. in this case, we use infinity to flatten all levels of nested arrays, resulting in a single-level array containing all the elements from the original complexArr.
+
+console.log(Array.isArray("Raees")); //false because "Raees" is a string, not an array.
+console.log(Array.isArray(complexArr)); //true because complexArr is an array.
+
+console.log(Array.from("Raees")); //Array.from creates a new array from an iterable or array-line object. in this case, it takes the string "Raees" and creates an array where each charecter of the string becomes an individual element in the array, resulting in ["R", "a", "e", "e", "s"].
+
+console.log(Array.from({ name: "Raees" }));
+
+const score1 = 100;
+const score2 = 200;
+const score3 = 300;
+
+console.log(Array.of(score1, score2, score3)); //Array.of creates a new array instance from a variable number of arguments, regardless of the number or type of the arguments.
+
