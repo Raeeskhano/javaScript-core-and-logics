@@ -20,14 +20,13 @@ console.log(numbArray);
 
 numbArray.shift(); //remove item from the start
 
-
 console.log(numbArray.includes(2)); //check if the array includes a value or not
 console.log(numbArray.indexOf(2)); //return the index of the value in the array.
 
 const newArr = numbArray.join(); //join all the element of array into a string
 console.log(newArr);
 
-const newArr2 = newArr.concat([6,7,7,8]); //combine two or more arrays
+const newArr2 = newArr.concat([6, 7, 7, 8]); //combine two or more arrays
 console.log(newArr2);
 console.log(numbArray);
 
@@ -40,3 +39,20 @@ console.log(numbArray);
 console.log("splice array", numbArray.splice(1, 3, 10, 11, 12)); //change the contents of an array by removing or replacing existing elements and/or adding new elements in place, it return the array of removed elements, the original array will be modified.
 console.log(numbArray);
 
+// *************************************************
+const fruits = ["apple", "banana", "orange"];
+const vegetables = ["carrot", "broccoli", "spinach"];
+
+console.log(fruits);
+//push
+// fruits.push(vegetables); //push adds the whole vegetable array as a single element to the fruits array, resulting in a nested array structure. the fruits array will be modified to include the vegetables array as a single element at the end.
+// console.log(fruits);
+
+//concat
+const allFruitsAndVegetables = fruits.concat(vegetables); //concat returns new array
+console.log(allFruitsAndVegetables);
+
+//spread operator
+
+const newMixed = [...fruits, ...vegetables]; //spread operator is used to expand the elements of an array into individual elements. it creates a new array by combining the elements of fruits and vegetables arrays.
+console.log(newMixed);
