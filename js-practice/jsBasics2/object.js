@@ -96,6 +96,8 @@ console.log(name);
 
 //****************APIs******************/
 
+//random user api --> https://randomuser.me/api/
+
 //json formate --> response of api
 // {
 //   "name": "Raees",
