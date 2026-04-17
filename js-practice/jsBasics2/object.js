@@ -77,5 +77,31 @@ console.log(Object.entries(user));
 
 console.log(user.hasOwnProperty("name"));
 
+//*********************************/
 
-//4:21:00
+//Destructuring
+
+const subject = {
+  subjectName: "Programming",
+  instructor: "Raees khan",
+  price: 999,
+};
+
+//subject.instructor;
+
+const { instructor, subjectName: name, price } = subject;
+
+console.log(instructor);
+console.log(name);
+
+//****************APIs******************/
+
+//json formate --> response of api
+// {
+//   "name": "Raees",
+//   "courseName": "mastering js",
+//   "price": "free",
+// }
+
+//objects within array--> response of api
+[{}, {}, {}];
