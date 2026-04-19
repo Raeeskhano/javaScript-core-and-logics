@@ -48,4 +48,46 @@ function loginUser(username) {
 
 console.log(loginUser("Raees"));
 
-//5:54:00
+//rest operator -> it is used to collect all the remaining elements into an array. it is denoted by three dots (...).
+
+function ItemsInCart(item1, item2, ...item) {
+  console.log(item1);
+  console.log(item2);
+  return item; //it will return an array of items in the cart.
+  // return `you have ${item.length} items in your cart`;
+}
+
+console.log(ItemsInCart("socks", "shoes", "pants", "shirts", "baggy trousers"));
+
+//***********************************************/
+
+const user = {
+  name: "Raees",
+  budget: 9999999999,
+};
+
+function handleUserObject(anyObject) {
+  console.log(
+    `the name of the user is "${anyObject.name}" and his budget is "${anyObject.budget}"`,
+  );
+}
+
+handleUserObject(user);
+handleUserObject({
+  name: "Raees",
+  budget: 9999999999,
+});
+
+//***********************************************
+
+const newArray = [100, 200, 300, 400];
+
+function getSecondElement(gettingArray) {
+  return gettingArray[1];
+}
+
+console.log(getSecondElement(newArray));
+console.log(getSecondElement([100, 200, 300, 400]));
+
+
+//5:05:00
