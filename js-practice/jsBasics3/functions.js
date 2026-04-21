@@ -89,5 +89,4 @@ function getSecondElement(gettingArray) {
 console.log(getSecondElement(newArray));
 console.log(getSecondElement([100, 200, 300, 400]));
 
-
 //5:05:00
