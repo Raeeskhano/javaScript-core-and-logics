@@ -17,7 +17,7 @@ console.log(user.message()); //changed context
 
 console.log(this); //because of global context, this will refer to the global empty object {} in case of node js and window object in case of browser.
 
-//********************************* */
+//**********************************/
 
 function pro() {
   let username = "Raees";
@@ -27,7 +27,7 @@ function pro() {
 
 pro();
 
-//**********************Arrow function ************************
+//**********************Arrow function************************
 
 const arroeFunction = () => {
   const username = "Raees";
@@ -55,4 +55,3 @@ console.log(implicit());
 const myarr = [1, 2, 33, 4, 5, 5];
 myarr.forEach((num) => console.log(num));
 
-//4:48:00
