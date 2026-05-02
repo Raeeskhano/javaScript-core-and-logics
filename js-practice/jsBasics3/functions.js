@@ -89,4 +89,16 @@ function getSecondElement(gettingArray) {
 console.log(getSecondElement(newArray));
 console.log(getSecondElement([100, 200, 300, 400]));
 
-//5:05:00
+//***********************************************/
+
+function loginMessage(username = "jon") {
+  //here in parameter i create a default username "jon" and if user provide username so it will override the default username.
+  if (!username) {
+    console.log("please provide username first.");
+  } else {
+    return `${username} just logged in`;
+  }
+}
+
+console.log(loginMessage("Raees khan"));
+console.log(loginMessage());
