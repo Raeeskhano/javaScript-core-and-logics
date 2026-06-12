@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Color Changer</title>
+    <link rel="stylesheet" href="colorChanger.css" />
+  </head>
+  <body>
+    <header class="header">
+      <nav>
+        <button>Home</button>
+        <button>Youtube Channel</button>
+      </nav>
+    </header>
+
+    <div class="color-container">
+      <h1>Color Changer</h1>
+      <div class="color-changer">
+        <div id="color-box-1" class="box"></div>
+        <div id="color-box-2" class="box"></div>
+        <div id="color-box-3" class="box"></div>
+        <div id="color-box-4" class="box"></div>
+      </div>
+      <p id="message">try clicking on one of the color boxes!</p>
+    </div>
+  </body>
+
+  <script>
+    const box1 = document.getElementById("color-box-1");
+    const box2 = document.getElementById("color-box-2");
+    const box3 = document.getElementById("color-box-3");
+    const box4 = document.getElementById("color-box-4");
+    const colorBoxes = [box1, box2, box3, box4];
+
+    // Add click event listener to each color box
+    colorBoxes.forEach((box) => {
+      box.addEventListener("click", () => {
+        // Get the computed background color of the clicked box
+        const currentColor = window.getComputedStyle(box).backgroundColor;
+
+        // Apply the color to the body background
+        document.body.style.backgroundColor = currentColor;
+
+        // Update the message
+        document.getElementById("message").textContent =
+          `Color changed to: ${currentColor}`;
+
+        console.log(`Current color: ${currentColor}`);
+      });
+    });
+  </script>
+</html>
