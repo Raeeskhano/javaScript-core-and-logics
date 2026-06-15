@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event 2</title>
+  </head>
+  <body>
+    <h1>Raees khan</h1>
+    <button id="stop">Stop</button>
+  </body>
+  <script>
+    // setTimeout(() => {
+    //   console.log("Raees khan");
+    // }, 2000);
+
+    const myName = () => {
+      document.querySelector("h1").innerHTML =
+        "My name is Raees khan, and i am Practicing Javascript as my hobby.";
+    };
+
+    const changee = setTimeout(myName, 2000);
+
+    document.querySelector("#stop").addEventListener("click", () => {
+      clearTimeout(changee);
+      console.log("Stop");
+    });
+  </script>
+</html>
