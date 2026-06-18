@@ -15,8 +15,15 @@ const userInfo = {
 // ********Constructor function************
 
 //A constructor function is a regular function used to create multiple objects with the same structure. Before ES6 classes, constructor functions were the main way to implement object-oriented programming in JavaScript.
-//its refrence to own constructor functiion
-//always start with capital by convension
+//its refrence to own constructor function
+
+// Key Points to Remember
+// ✅ Constructor functions create objects.
+// ✅ They are called with the new keyword.
+// ✅ this refers to the newly created object.
+// ✅ Constructor names start with a capital letter.
+// ✅ Shared methods should be placed on the prototype.
+// ✅ ES6 classes are syntactic sugar over constructor functions.
 
 //this --> object {}
 
