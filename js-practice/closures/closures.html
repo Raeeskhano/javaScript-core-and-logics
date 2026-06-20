@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Closure</title>
+  </head>
+  <body style="background-color: black">
+    <button id="orangeBtn">Orange</button>
+    <button id="greenBtn">Green</button>
+  </body>
+  <script>
+    // function init() {
+    //   let name = "Mozilla";
+    //   function displayName() {
+    //     console.log(name);
+    //   }
+    //   displayName();
+    // }
+    // init();
+
+    //lexical scope
+    // function outer() {
+    //   let username = "Raees";
+    //   console.log("parrent want secrete from child: ", secret);
+    //   function inner() {
+    //     let secret = "my123";
+    //     console.log("inner function", username);
+    //   }
+
+    //   function innerTwo() {
+    //     console.log("innertwo function", username);
+    //     console.log(secret);
+    //   }
+    //   inner();
+    //   innerTwo();
+    // }
+
+    // outer();
+
+    // console.log("outer function", username);
+
+    //closures
+
+    function closureFnc() {
+      const name = "Raees";
+      function Displayname() {
+        console.log(name);
+      }
+      Displayname();
+    }
+
+    const closureF = closureFnc();
+    closureFnc();
+  </script>
+
+  <script>
+    const orangeBtn = document.querySelector("#orangeBtn");
+    const greenBtn = document.querySelector("#greenBtn");
+
+    // orangeBtn.addEventListener("click", () => [
+    //   (document.body.style.backgroundColor = "orange"),
+    // ]);
+
+    // greenBtn.addEventListener("click", () => {
+    //   document.body.style.backgroundColor = "Green";
+    // });
+
+    function clickHandler(color) {
+      // document.body.style.backgroundColor = `${color}`;
+
+      return function () {
+        document.body.style.backgroundColor = `${color}`;
+      };
+    }
+
+    orangeBtn.onclick = clickHandler("orange");
+    greenBtn.onclick = clickHandler("green");
+  </script>
+</html>
