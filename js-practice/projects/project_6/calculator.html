@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body class="w-[100vw] bg-gray-900 text-white">
+    <div
+      class="calculator max-w-[250px] bg-gray-800 rounded-lg p-4 mx-auto mt-10"
+    >
+      <h1 class="text-3xl font-bold tracking-tighter text-center mb-2">
+        Calculator
+      </h1>
+      <div
+        class="display px-4 h-[60px] border-1 border-gray-500 rounded-lg text-end overflow-hidden"
+      >
+        <div id="expression" class="h-[20px] text-green-600"></div>
+        <div id="current" class="text-3xl text-bold h-[30px]">0</div>
+      </div>
+
+      <div class="buttons mt-2 grid grid-cols-4 gap-1">
+        <button
+          onclick="clearCalc()"
+          class="px-3 py-1 border-1 border-gray-500 rounded-lg hover:bg-gray-950 tracking-tighter text-bold duration-300 hover:scale-101"
+        >
+          AC
+        </button>
+        <button
+          onclick="pressNum('+/-')"
+          class="px-3 py-1 border-1 border-gray-500 rounded-lg hover:bg-gray-950 tracking-tighter text-bold duration-300 hover:scale-101"
+        >
+          +/-
+        </button>
+        <button
+          onclick="pressPercentage('%')"
+          class="px-3 py-1 border-1 border-gray-500 rounded-lg hover:bg-gray-950 tracking-tighter text-bold duration-300 hover:scale-101"
+        >
+          %
+        </button>
+        <button
+          onclick="pressOperator('/')"
+          class="px-3 py-1 border-1 border-gray-500 rounded-lg hover:bg-gray-950 tracking-tighter text-bold duration-300 hover:scale-101"
+        >
+          /
+        </button>
+        <button
+          onclick="pressNum('7')"
+          class="px-3 py-1 border-1 border-gray-500 rounded-lg hover:bg-gray-950 tracking-tighter text-bold duration-300 hover:scale-101"
+        >
+          7
+        </button>
+        <button
+          onclick="pressNum('8')"
+          class="px-3 py-1 border-1 border-gray-500 rounded-lg hover:bg-gray-950 tracking-tighter text-bold duration-300 hover:scale-101"
+        >
+          8
+        </button>
+        <button
+          onclick="pressNum('9')"
+          class="px-3 py-1 border-1 border-gray-500 rounded-lg hover:bg-gray-950 tracking-tighter text-bold duration-300 hover:scale-101"
+        >
+          9
+        </button>
+
+        <button
+          onclick="pressOperator('*')"
+          class="px-3 py-1 border-1 border-gray-500 rounded-lg hover:bg-gray-950 tracking-tighter text-bold duration-300 hover:scale-101"
+        >
+          *
+        </button>
+
+        <button
+          onclick="pressNum('4')"
+          class="px-3 py-1 border-1 border-gray-500 rounded-lg hover:bg-gray-950 tracking-tighter text-bold duration-300 hover:scale-101"
+        >
+          4
+        </button>
+
+        <button
+          onclick="pressNum('5')"
+          class="px-3 py-1 border-1 border-gray-500 rounded-lg hover:bg-gray-950 tracking-tighter text-bold duration-300 hover:scale-101"
+        >
+          5
+        </button>
+
+        <button
+          onclick="pressNum('6')"
+          class="px-3 py-1 border-1 border-gray-500 rounded-lg hover:bg-gray-950 tracking-tighter text-bold duration-300 hover:scale-101"
+        >
+          6
+        </button>
+
+        <button
+          onclick="pressOperator('-')"
+          class="px-3 py-1 border-1 border-gray-500 rounded-lg hover:bg-gray-950 tracking-tighter text-bold duration-300 hover:scale-101"
+        >
+          -
+        </button>
+
+        <button
+          onclick="pressNum('1')"
+          class="px-3 py-1 border-1 border-gray-500 rounded-lg hover:bg-gray-950 tracking-tighter text-bold duration-300 hover:scale-101"
+        >
+          1
+        </button>
+
+        <button
+          onclick="pressNum('2')"
+          class="px-3 py-1 border-1 border-gray-500 rounded-lg hover:bg-gray-950 tracking-tighter text-bold duration-300 hover:scale-101"
+        >
+          2
+        </button>
+
+        <button
+          onclick="pressNum('3')"
+          class="px-3 py-1 border-1 border-gray-500 rounded-lg hover:bg-gray-950 tracking-tighter text-bold duration-300 hover:scale-101"
+        >
+          3
+        </button>
+
+        <button
+          onclick="pressOperator('+')"
+          class="px-3 py-1 border-1 border-gray-500 rounded-lg hover:bg-gray-950 tracking-tighter text-bold duration-300 hover:scale-101"
+        >
+          +
+        </button>
+
+        <button
+          onclick="pressNum('0')"
+          class="px-3 py-1 border-1 border-gray-500 rounded-lg hover:bg-gray-950 tracking-tighter text-bold duration-300 hover:scale-101"
+        >
+          0
+        </button>
+
+        <button
+          onclick="pressDot('.')"
+          class="px-3 py-1 border-1 border-gray-500 rounded-lg hover:bg-gray-950 tracking-tighter text-bold duration-300 hover:scale-101"
+        >
+          .
+        </button>
+
+        <button
+          onclick="pressEqual('=')"
+          class="px-3 py-1 border-1 border-gray-500 rounded-lg hover:bg-gray-950 tracking-tighter text-bold duration-300 hover:scale-101"
+        >
+          =
+        </button>
+      </div>
+    </div>
+  </body>
+  <script src="./calculator.js"></script>
+</html>
