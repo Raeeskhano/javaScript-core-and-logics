@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz App</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body class="bg-gray-950 text-white w-[100vw] h-screen flex items-center">
+    <div class="QuizUi bg-gray-800 p-4 w-[70vw] mx-auto rounded-lg">
+      <div class="h-1 w-full bg-gray-500 rounded mb-2"></div>
+      <div>
+        <div class="progress flex justify-between mb-2 text-gray-300">
+          <p class="progressQuestion">Question 1 of 5</p>
+          <p class="score">score: 0</p>
+        </div>
+        <div class="questions">
+          <h1 class="questionText text-xl tracking-tighter font-bold mb-2">
+            question text
+          </h1>
+          <div class="options flex flex-col gap-2"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="quizApp.js"></script>
+</html>
